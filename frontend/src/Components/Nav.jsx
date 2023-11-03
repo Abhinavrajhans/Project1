@@ -8,7 +8,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useState ,useEffect } from 'react';
 import Cart from './Cart';
 import axios from 'axios';
-function Nav({setopenCart,openCart}) {
+function Nav({setopenCart,openCart,setRefreshPage,refreshPage}) {
 
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Nav({setopenCart,openCart}) {
 
 <div className="container">
 
-  <Link className="flex" to="/"><h1>Multicart</h1></Link>
+  <Link className="flex" to="/" onClick={()=>setRefreshPage()}><h1>Multimart</h1></Link>
 
   <div className="header-search-container">
 
@@ -80,31 +80,31 @@ function Nav({setopenCart,openCart}) {
 
           <li className="menu-title">
            
-            <Link to="/category/electronics">Electronics</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Electronics</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Desktop</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Desktop</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Laptop</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Laptop</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Camera</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Camera</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Tablet</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Tablet</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Headphone</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Headphone</Link>
           </li>
 
           <li className="panel-list-item">
-             <Link to="/">
+             <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>
               <img src={img1} alt="headphone collection" width="250"
                 height="119"/>
             </Link>
@@ -115,31 +115,31 @@ function Nav({setopenCart,openCart}) {
         <ul className="dropdown-panel-list">
 
           <li className="menu-title">
-            <Link to="/">Grocery</Link>
+            <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Grocery</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Spices</Link>
+            <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Spices</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Vegetables</Link>
+            <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Vegetables</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Fruits</Link>
+            <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Fruits</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Pulses</Link>
+            <Link to="/category/grocery"onClick={()=>setRefreshPage(refreshPage+1)}>Pulses</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Wheat/Rice</Link>
+            <Link to="/category/grocery"onClick={()=>setRefreshPage(refreshPage+1)}>Wheat/Rice</Link>
           </li>
 
-          <li className="panel-list-item">
-            <Link to="/">
+          <li className="panel-list-item" >
+            <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>
               <img src={img2} alt="men's fashion" width="250" height="119"/>
             </Link>
           </li>
@@ -149,31 +149,31 @@ function Nav({setopenCart,openCart}) {
         <ul className="dropdown-panel-list">
 
           <li className="menu-title">
-            <Link  to="/category/women's clothing">Fashion</Link>
+            <Link  to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Fashion</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Formal</Link>
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Formal</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Casual</Link>
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Casual</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Jeans</Link>
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Jeans</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Hoddies</Link>
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Hoddies</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Shoes</Link>
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Shoes</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">
+            <Link to="/category/women's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>
               <img src={img3} alt="women's fashion" width="250" height="119"/>
             </Link>
           </li>
@@ -183,31 +183,31 @@ function Nav({setopenCart,openCart}) {
         <ul className="dropdown-panel-list">
 
           <li className="menu-title">
-          <Link to="/category/electronics">Electronics</Link>
+          <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Electronics</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Smart Watch</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Smart Watch</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Smart TV</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Smart TV</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Keyboard</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Keyboard</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Mouse</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Mouse</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">Microphone</Link>
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Microphone</Link>
           </li>
 
           <li className="panel-list-item">
-            <Link to="/">
+            <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>
               <img src={img4} alt="mouse collection" width="250" height="119"/>
             </Link>
           </li>
@@ -218,72 +218,72 @@ function Nav({setopenCart,openCart}) {
     </li>
 
     <li className="menu-category">
-      <Link to="/" className="menu-title">Grocery</Link>
+      <Link to="/category/grocery" className="menu-title" onClick={()=>setRefreshPage(refreshPage+1)}>Grocery</Link>
 
       <ul className="dropdown-list">
 
         <li className="dropdown-item">
-          <Link to="/">Vegetables</Link>
+          <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Vegetables</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Fruits</Link>
+          <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Fruits</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Pulses</Link>
+          <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Pulses</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Grains</Link>
+          <Link to="/category/grocery" onClick={()=>setRefreshPage(refreshPage+1)}>Grains</Link>
         </li>
 
       </ul>
     </li>
 
     <li className="menu-category">
-    <Link to="/category/electronics" className="menu-title">Electronics</Link>
+    <Link to="/category/electronics" className="menu-title" onClick={()=>setRefreshPage(refreshPage+1)}>Electronics</Link>
 
       <ul className="dropdown-list">
 
         <li className="dropdown-item">
-          <Link to="/">Smart Watch</Link>
+          <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Smart Watch</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Smart TV</Link>
+          <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Smart TV</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Tablets</Link>
+          <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Tablets</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Headphones</Link>
+          <Link to="/category/electronics" onClick={()=>setRefreshPage(refreshPage+1)}>Headphones</Link>
         </li>
 
       </ul>
     </li>
 
     <li className="menu-category">
-    <Link to="/category/men's clothing" className="menu-title">Fashion</Link>
+    <Link to="/category/men's clothing" className="menu-title" onClick={()=>setRefreshPage(refreshPage+1)}>Fashion</Link>
 
       <ul className="dropdown-list">
 
         <li className="dropdown-item">
-          <Link to="/">Formal</Link>
+          <Link to="/category/men's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Formal</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Casual</Link>
+          <Link to="/category/men's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Casual</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Jeans</Link>
+          <Link to="/category/men's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Jeans</Link>
         </li>
 
         <li className="dropdown-item">
-          <Link to="/">Hoddies</Link>
+          <Link to="/category/men's clothing" onClick={()=>setRefreshPage(refreshPage+1)}>Hoddies</Link>
         </li>
 
       </ul>

@@ -17,7 +17,25 @@ function Category() {
       <div className="container">
 
         <div className="category-item-container has-scrollbar">
+          <div className="category-item">
 
+            <div className="category-img-box">
+              <img src={img5} alt="t-shirts" width="30"/>
+            </div>
+
+            <div className="category-content-box">
+
+              <div className="category-content-flex">
+                <h3 className="category-item-title">Grocery</h3>
+
+                <p className="category-item-amount">(35)</p>
+              </div>
+
+             <Link to={`/category/grocery`} className="category-btn">Show all</Link>
+
+            </div>
+
+          </div>
           
           <div className="category-item">
 
@@ -119,6 +137,7 @@ function Category() {
 
           </div>
 
+       
 
         </div>
 

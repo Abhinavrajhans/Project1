@@ -13,6 +13,26 @@ function Banner() {
 
    <div className="slider-item">
 
+<img src="https://images.pexels.com/photos/5579177/pexels-photo-5579177.jpeg" alt="modern sunglasses" className="banner-img"/>
+
+<div className="banner-content">
+
+  <p id="titlebanner1" className="banner-subtitle">Fresh from Farm</p>
+
+  <h2 id="banner" className="banner-title">Fresh Grocery</h2>
+
+  <p id="titlebanner2" className="banner-text">
+    Starting at ₹ <b>15</b>.00
+  </p>
+
+  <Link to="/category/grocery" className="banner-btn">Shop now</Link>
+
+</div>
+
+</div>
+
+   <div className="slider-item">
+
       <img src={banner} alt="new fashion summer sale" className="banner-img"/>
 
       <div className="banner-content">
@@ -56,25 +76,7 @@ function Banner() {
     
 
 
-     <div className="slider-item">
-
-<img src="https://images.pexels.com/photos/5579177/pexels-photo-5579177.jpeg" alt="modern sunglasses" className="banner-img"/>
-
-<div className="banner-content">
-
-  <p id="titlebanner1" className="banner-subtitle">Fresh from Farm</p>
-
-  <h2 id="banner" className="banner-title">Fresh Grocery</h2>
-
-  <p id="titlebanner2" className="banner-text">
-    Starting at ₹ <b>15</b>.00
-  </p>
-
-  <Link to="/" className="banner-btn">Shop now</Link>
-
-</div>
-
-</div>
+  
    </div>
 
   </div>

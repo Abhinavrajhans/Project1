@@ -245,7 +245,7 @@ function footer() {
     <img src={img1} alt="payment method" className="payment-img"/>
 
     <p className="copyright">
-      Copyright &copy; <Link to="/">Anon</Link> all rights reserved.
+      Copyright &copy; <Link to="/">The One Infotech</Link> all rights reserved.
     </p>
 
   </div>

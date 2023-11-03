@@ -5,6 +5,7 @@ import axios from 'axios';
 import Nav from './Nav';
 import './Nav.css';
 import "./Product.css"
+import { grocery } from './grocery';
 function NewProduct({setopenCart}) {
   const category = useParams().category;
   const id = useParams().id;
@@ -20,6 +21,11 @@ function NewProduct({setopenCart}) {
     // Fetch data from the API using Axios in the useEffect hook
     axios.get(baseURL) // Replace with the API endpoint
       .then((response) => {
+        if(category=='grocery')
+        {
+          setData(grocery.grocery);
+        }
+        else
         setData(response.data); // Store the fetched data in the state
         console.log(response.data,"  is the data from api")
       })

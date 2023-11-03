@@ -6,15 +6,19 @@ import axios from 'axios';
 import { useParams } from "react-router-dom"
 import NewProductCard from './NewProductCard';
 import './CategoryPage.css'
-
-function CategoryPage() {
+import { grocery } from './grocery';
+function CategoryPage({refreshPage}) {
   const [prod,setprod] =useState();
   const category = useParams().category;
   var baseURL;
+  console.log("hey i am in the category page ", category , " and the data is ",grocery)
  console.log(category)
-  if(category==='beauty products')
+  if(category=='beauty products')
   {
-    console.log("hey suman")
+    baseURL="http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
+  }
+  else if(category=='grocery')
+  {
     baseURL="http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
   }
   else{
@@ -22,11 +26,17 @@ function CategoryPage() {
   }
   
    useEffect(() => {
+    console.log("hey i am runnning with nike shoes on")
        axios.get(baseURL).then((response) => {
-          setprod(response.data);
+
+          if(category=='grocery')
+          {
+            setprod(grocery.grocery);
+          }
+          else  setprod(response.data);
           console.log(response.data)
       });
-    }, []);
+    }, [refreshPage]);
 
   return (
     <div className="CatergorypageContainer">
